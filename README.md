@@ -1,5 +1,5 @@
 # python-ascii-table
-## simple ascii table creator python
+**a simple ascii table creator python**
 
 ### No filter sample:
 ```

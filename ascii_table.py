@@ -21,10 +21,7 @@ class CreateAsciiTable:
         return ["".join(item) for item in zip(*ascii_table)]
 
     def _create_ends(self, num_items):
-        ends = []
-        ends.append("+")
-        ends.append("|")
-        ends.append("+")
+        ends = ["+", "|", "+"]
         for item in range(num_items - 1):
             ends.append("|")
         ends.append("+")
