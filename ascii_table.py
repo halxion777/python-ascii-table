@@ -37,12 +37,8 @@ class CreateAsciiTable:
     def _create_ascii_column(self, header, values):
         items = [header, *list(values)]
         max_len_string = min(60, len(max(items, key=lambda item: len(str(item))))) + 2
-        ascii_column = []
         dashes = f"+{'-' * (max_len_string)}"
-        ascii_column.append(dashes)
-        header_area = self._center_item(max_len_string, header)
-        ascii_column.append(header_area)
-        ascii_column.append(dashes)
+        ascii_column = [dashes, self._center_item(max_len_string, header), dashes]
         for value in values:
             value_len = 60 if len(str(value)) > 60 else len(str(value))
             if value_len == 60:
